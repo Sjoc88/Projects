@@ -1,4 +1,4 @@
-### AIRBNB European dataset 2023
+    ### AIRBNB European dataset 2023
 
 La Descripción completa de todas las estancias Airbnb en Europa con el tipo de estancia, precios y a qué distancia está del metro y del centro de la ciudad y muchos otros detalles para realizar el análisis necesario.
 
@@ -78,6 +78,8 @@ La cantidad de restaurantes (indexado) alreadedor del alojamiento normalizada
 
 ## 5. Primeros pasos
 
+### DÍA 1
+
 Limpieza:
 
 - Hoy 20 de Mayo, hemos cambiado a 'Number' el formato de nuestros datos numericos
@@ -92,3 +94,16 @@ Analisis rápida:
 
 - Una pivot table para tener a mano una breve captura de cuantos alojamientos por cuidades, el precio promedio y el index de atractividad promedio tal y como la satisfacción general de los usuarios promedios por cada cuidad. 
 
+### DÍA 2
+
+Agrupacición y rangos:
+
+- Después de haber insertado una pivot table para destacar las evaluaciones generales, hemos agrupado las puntuaciones (en rango de unidades de 10) para así poder ver dichas puntuaciones en diferentes rangos. Adicionalemente, insertaremos coulumnas al lado de las columnas para las cuales sería relevante tener una etiqueta considerando aquellos rangos (ie. Reseña mala, Reseña buena, Reseña excelente). Esa etapa tambien valdría para la limipìeza (con rango de unidades de 1) pero tambien para los precios y las distancias. Hasta para los indices.
+
+Limpieza:
+- Al imponer rangos para los precios, nos dimos cuenta que el formato de los datos brutos incluía un monton de decimales... lo cual complicaba mucho la lisibilidad del grafico (Pivot sheet) una vez activada la agrupacion de los precios. Nos tuvimos que ir al Power Query para rondear los precios y así, ¡mucho mejor!
+
+- Tendremos que hacer el mismo preceso para las distancias al centro, y al metro. Al final de las 2 opciones de agrupar por unidades o por etiquetas, creo que saldría a cuenta lo de las etiquetas... menos faena de limpieza de datos.
+
+Visibilidad:
+- Para el grafico de 'Bedrooms' utilizaremos un axis y con escala logaritmica, de otra manera no se podría apreciar bien el recuento de alojamientos con 5 o mas habitaciones
