@@ -107,3 +107,17 @@ Limpieza:
 
 Visibilidad:
 - Para el grafico de 'Bedrooms' utilizaremos un axis y con escala logaritmica, de otra manera no se podría apreciar bien el recuento de alojamientos con 5 o mas habitaciones
+
+### DÍA 3
+
+Agrupación:
+- Hoy agrupamos las distancias al metro y al centro en varios grupos
+
+Cluster:
+- Hemos creado 3 graficos de cluster bajo la sheet 'Analysis' para analizar brevemente si existe una correlacioón entre el precio y otros datos, como por ejemplo las distancias al metro/centro, la capacidad de los alojamientos o por ejemplo el tipo de alojamiento. 
+Aquí nos encontramos con une problemilla a la hora de hacer un grafico de cluster para el tipo de alojamiento, ya que no es un dato quantitativo...
+
+Dashboard:
+- Hoy empezamos a introducir elementos en nustro Dashboard. En prcincipio, el Dashboard nos permite hacer 2 cosas basicas;
+   1. Ver el precio promedio por noche en funcion de criterios personalizados con slicers
+   2. Ver cuantos apartamentos hay disponibles por cuidades en funcion de criterios personalizados, siempre usando slicers
