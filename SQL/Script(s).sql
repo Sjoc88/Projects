@@ -104,6 +104,103 @@ JOIN film_category fc ON f.film_id = fc.film_id
 JOIN category c ON fc.category_id = c.category_id
 WHERE c.name = 'Comedy' AND f.length >=180;
 
+-- 19. Encuentra las categorías de películas con promedio de duración > 110
+SELECT c.name, avg(f.length)
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+GROUP BY c.name
+HAVING avg(f.length) > 110
+ORDER BY avg(f.length) DESC;
+
+-- 20. ¿Cuál es la media de duración del alquiler de las películas?
+SELECT f.title,
+       AVG(r.return_date - r.rental_date) AS avg_duration
+FROM rental r
+JOIN inventory i ON r.inventory_id = i.inventory_id
+JOIN film f ON i.film_id = f.film_id
+GROUP BY f.title
+ORDER BY f.title ASC;
+
+-- 21. Crea una columna con el nombre y apellidos de todos los actores
+SELECT CONCAT(first_name,' ', last_name) AS Name
+FROM actor
+ORDER BY CONCAT(first_name,' ', last_name);
+
+-- 22. Números de alquiler por día, ordenados desc
+SELECT Count(*), DATE(rental_date)
+FROM rental
+GROUP BY DATE(rental_date)
+ORDER BY count(*) DESC;
+
+-- 23. Encuentra las películas con duración superior al promedio
+SELECT title, avg(length)
+FROM film
+WHERE length > (SELECT
+					Avg(length)
+					FROM film)
+GROUP BY title
+ORDER BY avg(length) DESC;
+
+-- 24. Número de alquileres por mes
+SELECT DATE_TRUNC('month', rental_date) AS MONTH, count(*) AS total
+FROM rental
+GROUP BY MONTH;
+
+-- 25. Promedio, desviación estándar y varianza del total pagado
+SELECT avg(amount), stddev(amount), VARIANCE(Amount)
+FROM payment;
+
+-- 26. ¿Qué películas se alquilan por encima del precio medio?
+SELECT f.title
+FROM film f
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON i.inventory_id = r.inventory_id
+JOIN payment p ON r.rental_id = p.rental_id
+WHERE p.amount > (SELECT AVG(amount) FROM payment)
+GROUP BY f.title
+ORDER BY f.title ASC;
+
+-- 27. Actores con más de 40 películas
+SELECT CONCAT(first_name,' ', last_name) AS Name, count(f.film_id) AS film
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON f.film_id = fa.film_id
+GROUP BY name
+HAVING COUNT(f.film_id) > 40
+ORDER BY film DESC;
+
+-- 28. Películas + disponibilidad en inventario
+SELECT f.title, count(f.film_id) AS inventory
+FROM film f
+JOIN inventory i ON f.film_id = i.film_id
+GROUP BY f.title
+ORDER BY f.title ASC;
+
+-- 29. Actores + numero de peliculas
+SELECT CONCAT(first_name,' ', last_name) AS Name, count(f.film_id) AS film
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON f.film_id = fa.film_id
+GROUP BY name
+ORDER BY film DESC;
+
+-- 30. Todas las películas + actores (aunque no tengan actores)
+SELECT f.title, CONCAT(a.first_name, ' ', a.last_name) AS actor_name
+FROM film f
+LEFT JOIN film_actor fa ON f.film_id = fa.film_id
+LEFT JOIN actor a ON fa.actor_id = a.actor_id
+ORDER BY f.title, actor_name;
+
+-- 31. Todos los actores + películas (aunque no tengan películas)
+SELECT CONCAT(a.first_name, ' ', a.last_name) AS actor_name, f.title
+FROM actor a
+LEFT JOIN film_actor fa ON fa.actor_id = a.actor_id
+LEFT JOIN film f ON f.film_id = fa.film_id
+ORDER BY actor_name, f.title;
+
+
+
 
 
 
