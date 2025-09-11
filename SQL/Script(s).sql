@@ -199,8 +199,85 @@ LEFT JOIN film_actor fa ON fa.actor_id = a.actor_id
 LEFT JOIN film f ON f.film_id = fa.film_id
 ORDER BY actor_name, f.title;
 
+-- 32. Todas las películas + todos los alquileres
+SELECT f.title, r.rental_date
+FROM film f
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+ORDER BY f.title, r.rental_date;
 
+-- 33. Top 5 clientes que mas gastaron
+SELECT CONCAT(c.first_name,' ',c.last_name), Sum(p.amount)
+FROM payment p
+JOIN customer c ON p.customer_id = c.customer_id
+GROUP BY CONCAT(c.first_name,' ',c.last_name)
+ORDER BY sum(p.amount) DESC
+LIMIT 5;
 
+-- 34. Actores con primer nombre = 'Johnny'
+SELECT first_name, last_name
+FROM actor
+WHERE first_name LIKE '%Johnny%';
 
+-- 35. Renombra columnas “first_name” como Nombre y “last_name” como Apellido 
+SELECT first_name AS Nombre, last_name AS Appellido
+FROM actor;
 
+-- 36. Encuentra el ID del actor más bajo y más alto en la tabla actor
+SELECT MIN(actor_id), MAX(actor_id)
+FROM actor;
 
+-- 37. Cuenta cuántos actores hay en la tabla actor
+SELECT Count(*)
+FROM actor;
+
+SELECT COUNT(DISTINCT(CONCAT(first_name,' ', last_name)))
+FROM actor
+
+-- puede que haya 200 ID con 1 nombre duplicado ^^
+
+-- 38. Selecciona todos los actores y ordénalos por apellido en orden ascendente
+SELECT first_name, last_name
+FROM actor
+ORDER BY last_name DESC;
+
+-- 39. Selecciona las primeras 5 películas de la tabla film
+SELECT title
+FROM film
+LIMIT 5;
+
+-- 40. Agrupa los actores por su nombre y cuenta cuántos actores tienen el mismo nombre. ¿Cuál es el nombre más repetido?
+SELECT first_name, count(first_name)
+FROM actor
+GROUP BY first_name
+ORDER BY count(first_name) DESC;
+
+-- 41. Encuentra todos los alquileres y los nombres de los clientes que los realizaron
+SELECT r.rental_id, r.rental_date, c.first_name, c.last_name
+FROM rental r
+JOIN customer c ON r.customer_id = c.customer_id
+ORDER BY r.rental_date;
+
+-- 42. Muestra todos los clientes y sus alquileres si existen, incluyendo aquellos que no tienen alquileres
+SELECT c.first_name, c.last_name, r.rental_id
+FROM rental r
+LEFT JOIN customer c ON r.rental_id = c.customer_id;
+
+-- 43. Realiza un CROSS JOIN entre las tablas film y category. ¿Aporta valor esta consulta?
+SELECT *
+FROM film
+CROSS JOIN category
+
+-- no aporta ningún valor este cross join en mi humilde opinion....
+
+-- 44. Encuentra los actores que han participado en películas de la categoría 'Action'
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Action'
+ORDER BY CONCAT(a.first_name, ' ', a.last_name);
+
+-- 45. Encuentra todos los actores que no han participado en películas
