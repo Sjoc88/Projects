@@ -281,3 +281,82 @@ WHERE c.name = 'Action'
 ORDER BY CONCAT(a.first_name, ' ', a.last_name);
 
 -- 45. Encuentra todos los actores que no han participado en películas
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+FROM actor a
+LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id
+WHERE film_id IS NULL;
+
+-- 46. Selecciona el nombre de los actores y la cantidad de películas en las que han participado
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)), COUNT (DISTINCT(fa.film_id))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+GROUP BY DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+ORDER BY COUNT (DISTINCT(fa.film_id)) DESC;
+
+-- 47. Crea una vista llamada actor_num_peliculas que muestre los nombres de los actores y el número de películas en las que han participado
+CREATE VIEW actor_num_peliculas AS 
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)), COUNT (DISTINCT(fa.film_id))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+GROUP BY DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+ORDER BY COUNT (DISTINCT(fa.film_id)) DESC;
+
+SELECT * FROM actor_num_peliculas
+
+-- 48. Calcula el número total de alquileres realizados por cada cliente
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+ORDER BY count(DISTINCT(r.rental_id)) DESC;
+
+-- 49. Calcula la duración total de las películas en la categoría 'Action'
+SELECT sum(f.length) AS total_length
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Action';
+
+-- 50 Crea una tabla temporal llamada cliente_rentas_temporal para almacenar el total de alquileres por cliente
+CREATE TEMP TABLE cliente_rentas_temporal AS
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+ORDER BY count(DISTINCT(r.rental_id)) DESC
+
+-- 51 Crea una tabla temporal llamada peliculas_alquiladas que almacene las películas que han sido alquiladas al menos 10 veces
+CREATE TEMP TABLE peliculas_alquiladas AS 
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+HAVING count(DISTINCT(r.rental_id)) > 10
+ORDER BY count(DISTINCT(r.rental_id)) DESC;
+
+-- 52. Encuentra las películas alquiladas por Tammy Sanders y que aún no se han devuelto
+SELECT DISTINCT (f.title)
+FROM inventory i
+JOIN film f ON f.film_id = i.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN customer c ON c.customer_id = r.customer_id
+WHERE r.return_date IS NULL AND CONCAT(c.first_name,' ',c.last_name) = 'Tammy Sanders'
+GROUP BY f.title
+
+-- there are no rentings not returned by this customer --
+
+-- 53. Encuentra actores que han actuado en al menos una película de categoría 'Sci-Fi'
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)) AS actor_name, COUNT(c.name)
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Sci-Fi'
+GROUP BY CONCAT(a.first_name, ' ', a.last_name)
+HAVING Count(c.name = 'Sci-Fi') > 1
+ORDER BY CONCAT(a.first_name, ' ', a.last_name);
+
+
