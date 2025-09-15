@@ -199,8 +199,164 @@ LEFT JOIN film_actor fa ON fa.actor_id = a.actor_id
 LEFT JOIN film f ON f.film_id = fa.film_id
 ORDER BY actor_name, f.title;
 
+-- 32. Todas las películas + todos los alquileres
+SELECT f.title, r.rental_date
+FROM film f
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+ORDER BY f.title, r.rental_date;
 
+-- 33. Top 5 clientes que mas gastaron
+SELECT CONCAT(c.first_name,' ',c.last_name), Sum(p.amount)
+FROM payment p
+JOIN customer c ON p.customer_id = c.customer_id
+GROUP BY CONCAT(c.first_name,' ',c.last_name)
+ORDER BY sum(p.amount) DESC
+LIMIT 5;
 
+-- 34. Actores con primer nombre = 'Johnny'
+SELECT first_name, last_name
+FROM actor
+WHERE first_name LIKE '%Johnny%';
 
+-- 35. Renombra columnas “first_name” como Nombre y “last_name” como Apellido 
+SELECT first_name AS Nombre, last_name AS Appellido
+FROM actor;
+
+-- 36. Encuentra el ID del actor más bajo y más alto en la tabla actor
+SELECT MIN(actor_id), MAX(actor_id)
+FROM actor;
+
+-- 37. Cuenta cuántos actores hay en la tabla actor
+SELECT Count(*)
+FROM actor;
+
+SELECT COUNT(DISTINCT(CONCAT(first_name,' ', last_name)))
+FROM actor
+
+-- puede que haya 200 ID con 1 nombre duplicado ^^
+
+-- 38. Selecciona todos los actores y ordénalos por apellido en orden ascendente
+SELECT first_name, last_name
+FROM actor
+ORDER BY last_name DESC;
+
+-- 39. Selecciona las primeras 5 películas de la tabla film
+SELECT title
+FROM film
+LIMIT 5;
+
+-- 40. Agrupa los actores por su nombre y cuenta cuántos actores tienen el mismo nombre. ¿Cuál es el nombre más repetido?
+SELECT first_name, count(first_name)
+FROM actor
+GROUP BY first_name
+ORDER BY count(first_name) DESC;
+
+-- 41. Encuentra todos los alquileres y los nombres de los clientes que los realizaron
+SELECT r.rental_id, r.rental_date, c.first_name, c.last_name
+FROM rental r
+JOIN customer c ON r.customer_id = c.customer_id
+ORDER BY r.rental_date;
+
+-- 42. Muestra todos los clientes y sus alquileres si existen, incluyendo aquellos que no tienen alquileres
+SELECT c.first_name, c.last_name, r.rental_id
+FROM rental r
+LEFT JOIN customer c ON r.rental_id = c.customer_id;
+
+-- 43. Realiza un CROSS JOIN entre las tablas film y category. ¿Aporta valor esta consulta?
+SELECT *
+FROM film
+CROSS JOIN category
+
+-- no aporta ningún valor este cross join en mi humilde opinion....
+
+-- 44. Encuentra los actores que han participado en películas de la categoría 'Action'
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Action'
+ORDER BY CONCAT(a.first_name, ' ', a.last_name);
+
+-- 45. Encuentra todos los actores que no han participado en películas
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+FROM actor a
+LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id
+WHERE film_id IS NULL;
+
+-- 46. Selecciona el nombre de los actores y la cantidad de películas en las que han participado
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)), COUNT (DISTINCT(fa.film_id))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+GROUP BY DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+ORDER BY COUNT (DISTINCT(fa.film_id)) DESC;
+
+-- 47. Crea una vista llamada actor_num_peliculas que muestre los nombres de los actores y el número de películas en las que han participado
+CREATE VIEW actor_num_peliculas AS 
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)), COUNT (DISTINCT(fa.film_id))
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+GROUP BY DISTINCT(CONCAT(a.first_name, ' ', a.last_name))
+ORDER BY COUNT (DISTINCT(fa.film_id)) DESC;
+
+SELECT * FROM actor_num_peliculas
+
+-- 48. Calcula el número total de alquileres realizados por cada cliente
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+ORDER BY count(DISTINCT(r.rental_id)) DESC;
+
+-- 49. Calcula la duración total de las películas en la categoría 'Action'
+SELECT sum(f.length) AS total_length
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Action';
+
+-- 50 Crea una tabla temporal llamada cliente_rentas_temporal para almacenar el total de alquileres por cliente
+CREATE TEMP TABLE cliente_rentas_temporal AS
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+ORDER BY count(DISTINCT(r.rental_id)) DESC
+
+-- 51 Crea una tabla temporal llamada peliculas_alquiladas que almacene las películas que han sido alquiladas al menos 10 veces
+CREATE TEMP TABLE peliculas_alquiladas AS 
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY DISTINCT(CONCAT(c.first_name,' ',c.last_name))
+HAVING count(DISTINCT(r.rental_id)) > 10
+ORDER BY count(DISTINCT(r.rental_id)) DESC;
+
+-- 52. Encuentra las películas alquiladas por Tammy Sanders y que aún no se han devuelto
+SELECT DISTINCT (f.title)
+FROM inventory i
+JOIN film f ON f.film_id = i.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN customer c ON c.customer_id = r.customer_id
+WHERE r.return_date IS NULL AND CONCAT(c.first_name,' ',c.last_name) = 'Tammy Sanders'
+GROUP BY f.title
+
+-- there are no rentings not returned by this customer --
+
+-- 53. Encuentra actores que han actuado en al menos una película de categoría 'Sci-Fi'
+SELECT DISTINCT(CONCAT(a.first_name, ' ', a.last_name)) AS actor_name, COUNT(c.name)
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Sci-Fi'
+GROUP BY CONCAT(a.first_name, ' ', a.last_name)
+HAVING Count(c.name = 'Sci-Fi') > 1
+ORDER BY CONCAT(a.first_name, ' ', a.last_name);
 
 
