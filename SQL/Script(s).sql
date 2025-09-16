@@ -359,4 +359,112 @@ GROUP BY CONCAT(a.first_name, ' ', a.last_name)
 HAVING Count(c.name = 'Sci-Fi') > 1
 ORDER BY CONCAT(a.first_name, ' ', a.last_name);
 
+-- 54. Actores en películas alquiladas después de la primera vez que se alquiló Spartacus Cheaper
+WITH Spartacus_first_rental AS (
+	SELECT min(rental_date) AS first_rental
+	FROM rental r
+)
+SELECT CONCAT(a.first_name,' ',a.last_name)
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON i.inventory_id = r.inventory_id
+WHERE r.rental_date > (SELECT first_rental FROM spartacus_first_rental)
+GROUP BY CONCAT(a.first_name,' ',a.last_name)
+ORDER BY CONCAT(a.first_name,' ',a.last_name)
+
+-- 55. Actores que no han actuado en películas de categoría 'Music'
+WITH actor_music_film AS (
+	SELECT CONCAT(a.first_name,' ',a.last_name) AS actor_name
+	FROM actor a
+	JOIN film_actor fa ON a.actor_id = fa.actor_id
+	JOIN film f ON fa.film_id = f.film_id
+	JOIN film_category fc ON f.film_id = fc.film_id
+	JOIN category c ON fc.category_id = c.category_id
+	WHERE c.name = 'Music'
+)
+SELECT CONCAT(a.first_name,' ',a.last_name)
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE CONCAT(a.first_name,' ',a.last_name) NOT IN (SELECT actor_name FROM actor_music_film)
+GROUP BY CONCAT(a.first_name,' ',a.last_name);
+
+-- 56 Películas alquiladas por más de 8 días
+SELECT DISTINCT f.title
+FROM film f
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON i.inventory_id = r.inventory_id
+WHERE (r.return_date - r.rental_date) > INTERVAL '8 days'
+ORDER BY f.title;
+
+-- 57. Películas que son de la misma categoría que 'Animation'
+SELECT f.title
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+WHERE fc.category_id = (
+    SELECT category_id
+    FROM category
+    WHERE name = 'Animation'
+);
+
+-- 58. Películas que tienen la misma duración que Dancing Fever
+SELECT title
+FROM film
+WHERE length = (
+    SELECT length
+    FROM film
+    WHERE title = 'Dancing Fever'
+)
+ORDER BY title;
+
+-- 59. Clientes que han alquilado al menos 7 películas distintas
+SELECT CONCAT(c.first_name,' ',c.last_name), COUNT(DISTINCT(f.film_id))
+FROM film f
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN customer c ON c.customer_id = r.customer_id
+GROUP BY CONCAT(c.first_name,' ',c.last_name)
+HAVING COUNT(DISTINCT(f.film_id)) >= 7
+ORDER BY CONCAT(c.first_name,' ',c.last_name);
+
+-- 60. Cantidad total de películas alquiladas por categoría
+SELECT c.name AS category_name, COUNT(r.rental_id) AS total_rentals
+FROM category c
+JOIN film_category fc ON c.category_id = fc.category_id
+JOIN film f ON fc.film_id = f.film_id
+JOIN inventory i ON f.film_id = i.film_id
+JOIN rental r ON i.inventory_id = r.inventory_id
+GROUP BY c.name
+ORDER BY total_rentals DESC;
+
+-- 61. Número de películas por categoría estrenadas en 2006
+SELECT c.name AS category_name, COUNT(f.title) AS total_films
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE f.release_year = 2006
+GROUP BY c.name;
+
+-- 62. Todas las combinaciones de trabajadores con las tiendas
+SELECT s.staff_id,
+       s.first_name,
+       s.last_name,
+       st.store_id
+FROM staff s
+CROSS JOIN store st
+ORDER BY s.staff_id, st.store_id;
+
+-- 63. Total de películas alquiladas por cliente (id + nombre + apellido)
+SELECT DISTINCT(CONCAT(c.first_name,' ',c.last_name)) AS customer_name, c.customer_id, count(DISTINCT(r.rental_id)) AS rentals
+FROM rental r
+JOIN customer c ON r.customer_id = r.customer_id
+GROUP BY c.customer_id
+ORDER BY count(DISTINCT(r.rental_id)) DESC;
+
+
+
 
