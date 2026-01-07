@@ -19,7 +19,6 @@ The database used is **Pagila**, a relational schema that simulates a movie rent
 ## 🗂️ Repository Structure
 
 scripts/
-00_setup/
 01_basics/
 02_aggregations/
 03_joins/
@@ -33,7 +32,6 @@ EnunciadoDataProject_SQL.Lógica.pdf
 
 ### Folder description
 
-- **00_setup** → sanity checks and exploratory queries
 - **01_basics** → SELECT, WHERE, ORDER BY, LIMIT, DISTINCT
 - **02_aggregations** → COUNT, SUM, AVG, GROUP BY, HAVING, date logic
 - **03_joins** → INNER JOIN, LEFT JOIN, CROSS JOIN
@@ -75,7 +73,7 @@ EnunciadoDataProject_SQL.Lógica.pdf
 A view was created to show the number of movies per actor:
 
 ```sql
-CREATE OR REPLACE VIEW actor_num_peliculas AS
+CREATE VIEW actor_num_peliculas AS
 SELECT a.actor_id,
        a.first_name,
        a.last_name,
