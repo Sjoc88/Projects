@@ -39,9 +39,38 @@ No critical missing values or structural data integrity issues were detected at 
 
 ---
 
-## 3. Data Cleaning & Validation
+## 3. Merge
 
-### 3.1 Data Types
+Even though I initially checked both files (csv & xlsx) I somehow did not pay much attention to the xlsx file and its info and went straight into the 'bank_additional' dataset. 
+Only to realize latter on after submitting my work that this 'customer-details.xlsx' dataset had lots of infortmation! What a mistake, but happy I recovered!
+
+Also, before even considering to merge both files, I had to think on how to make it usabale, using my 'basic' excel knowledge and Power Query. So I imported the different year sheets into a copy file
+where I imported through csv file and slightly transformed/cleaned the data, before finally appending them into a new 'All' query. That way, it was quite easier to merge/join through the id_ column
+
+I still ran key commands such as:
+```python
+merged.shape
+merged.columns
+merged.info()
+merged.describe()
+```
+
+And then also ran a quick check to ensure there were a similar numbers of rows in merged files:
+
+```python
+print(len(bank))
+print(len(customers))
+```
+
+I was a bit surprised when I grouped incomes per profession and realized it may not be correlated. I assumed it would be but glad I did check
+```python
+merged.groupby("job")["Income"].mean()
+```
+
+
+## 4. Data Cleaning & Validation
+
+### 4.1 Data Types
 
 The `age` variable was initially stored as a float.
 
@@ -62,7 +91,7 @@ However, this did not materially impact analysis, so it was treated as a low-pri
 
 ---
 
-### 3.2 Categorical Consistency
+### 4.2 Categorical Consistency
 
 We verified that categorical variables did not contain typos or formatting inconsistencies.
 
@@ -95,7 +124,7 @@ No unknown values were present, reducing the need for categorical imputation.
 
 ---
 
-## 4. Special Value Investigation — `pdays`
+## 5. Special Value Investigation — `pdays`
 
 The variable `pdays` represents:
 
@@ -125,11 +154,11 @@ Thus, `999` is not an error but a meaningful encoded category.
 
 ---
 
-## 5. Feature Engineering
+## 6. Feature Engineering
 
 To better capture campaign dynamics, we engineered binary segmentation variables.
 
-### 5.1 Contact History Flag
+### 6.1 Contact History Flag
 
 ```python
 bank["contacted_before"] = (bank["previous"] > 0).astype(int)
@@ -144,7 +173,7 @@ This variable isolates relationship history.
 
 ---
 
-### 5.2 Contact Recency Flag
+### 6.2 Contact Recency Flag
 
 ```python
 bank["recent_contact"] = (bank["pdays"] != 999).astype(int)
@@ -159,7 +188,7 @@ This captures recency effect.
 
 ---
 
-## 6. Target Encoding
+## 7. Target Encoding
 
 To enable numeric aggregation and conversion rate calculations, the target variable was encoded as a binary numeric field:
 
@@ -176,11 +205,11 @@ This transformation allows direct computation of subscription rates using averag
 
 ---
 
-## 7. Contact History & Recency Impact
+## 8. Contact History & Recency Impact
 
 To assess the influence of prior interactions on campaign success, two complementary segmentation variables were engineered:
 
-### 7.1 Contact History Flag
+### 8.1 Contact History Flag
 
 ```python
 bank["contacted_before"] = (bank["previous"] > 0).astype(int)
@@ -206,7 +235,7 @@ This highlights the importance of follow-up campaigns and relationship-building 
 
 ---
 
-### 7.2 Contact Recency Flag
+### 8.2 Contact Recency Flag
 
 To capture recency effects, we engineered an additional variable based on the `pdays` field:
 
@@ -231,7 +260,7 @@ However, this segment represents only ~3.7% of the dataset (1,588 of 43K+ record
 
 ---
 
-### 7.3 Duration Bias Consideration
+### 8.3 Duration Bias Consideration
 
 Further investigation revealed that recently contacted clients experienced longer call durations on average:
 
@@ -244,7 +273,7 @@ Since call duration strongly correlates with successful subscription outcomes, t
 
 ---
 
-### 7.4 Duration Bias Validation
+### 8.4 Duration Bias Validation
 
 Given the unusually high conversion rate among recently contacted clients, we investigated whether call duration influenced outcomes.
 
@@ -267,7 +296,7 @@ Since call duration is strongly correlated with successful subscription outcomes
 
 ---
 
-### 7.5 Key Takeaways
+### 8.5 Key Takeaways
 
 * Prior contact history significantly increases conversion likelihood
 * Recent interactions amplify subscription success even further
@@ -279,7 +308,7 @@ These findings reinforce the strategic value of customer relationship continuity
 
 ---
 
-## 8. Conversion by Professional Segment
+## 9. Conversion by Professional Segment
 
 To identify high-performing demographic targets, conversion rates were analyzed across job categories.
 
@@ -328,12 +357,12 @@ These groups demonstrate comparatively lower engagement, suggesting either reduc
 
 ---
 
-## 9. Conversion by Marital Segment
+## 10. Conversion by Marital Segment
 
 
 ---
 
-## 10. Current Insight Maturity
+## 11. Current Insight Maturity
 
 At this stage, the analysis has identified three primary campaign performance drivers:
 
@@ -348,7 +377,7 @@ These variables form the foundation for deeper segmentation and predictive model
 
 ---
 
-## 11. Temporal Segmentation
+## 12. Temporal Segmentation
 
 ### Initial Hypothesis
 
@@ -470,7 +499,7 @@ rather than time-based outreach scheduling.
 ---
 
 
-## 12 Geographic Segmentation
+## 13. Geographic Segmentation
 
 ### Initial Hypothesis
 
@@ -555,7 +584,7 @@ As a result:
 
 ---
 
-## 13. Updated Insight Maturity
+## 14. Updated Insight Maturity
 
 At this stage, the analysis has analysed six campaign performance drivers:
 
