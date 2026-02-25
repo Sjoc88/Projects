@@ -1,0 +1,2018 @@
+<PVPCDesgloseHorario xmlns="http://sujetos.esios.ree.es/schemas/2014/04/01/PVPCDesgloseHorario-esios-MP/">
+        <IdentificacionMensaje v="pvpcdesglosehorario_20231108"/>
+        <VersionMensaje v="1"/>
+        <TipoMensaje v="Z55"/>
+        <TipoProceso v="A01"/>
+        <TipoClasificacion v="A01"/>
+        <IdentificacionRemitente codificacion="A01" v="10XES-REE------E"/>
+        <FuncionRemitente v="A04"/>
+        <IdentificacionDestinatario codificacion="A01" v="10XES-REE------E"/>
+        <FuncionDestinatario v="A04"/>
+        <FechaHoraMensaje v="2023-11-07T19:55:22Z"/>
+        <Horizonte v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST1"/>
+            <TerminoCosteHorario v="CAPh"/>
+            <TipoPrecio v="Z24"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST2"/>
+            <TerminoCosteHorario v="CAPh"/>
+            <TipoPrecio v="Z14"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.001068"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.000178"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST3"/>
+            <TerminoCosteHorario v="CCOMh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.00003702"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST4"/>
+            <TerminoCosteHorario v="CCOSh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.00015971"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST5"/>
+            <TerminoCosteHorario v="CCVh"/>
+            <TipoPrecio v="Z24"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.002755452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.002579452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.002564452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.002542452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.002408452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.002519452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.002624452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.002911452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.002991452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.002750452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.002643452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.002549452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.002509452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.002508452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.002528452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.002594452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.002807452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.003116452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.003208452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.003143452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.003063452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.002847452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.002757452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.002557452"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST6"/>
+            <TerminoCosteHorario v="CCVh"/>
+            <TipoPrecio v="Z14"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.002755452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.002579452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.002564452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.002542452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.002408452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.002519452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.002624452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.002911452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.002991452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.002750452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.002657452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.002549452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.002509452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.002508452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.002514452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.002594452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.002807452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.003116452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.003221452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.003143452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.003063452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.002847452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.002744452"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.002557452"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST7"/>
+            <TerminoCosteHorario v="CDSVh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.00154"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST8"/>
+            <TerminoCosteHorario v="EDCGASh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST9"/>
+            <TerminoCosteHorario v="EDSRh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST10"/>
+            <TerminoCosteHorario v="FEU"/>
+            <TipoPrecio v="Z24"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.13545470113"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.122069686768"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.121344802678"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.119725073042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.108715009042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.117372219132"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.124157627856"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.14509223658"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.17559649476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.155268567394"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.146105082938"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.18383397203"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.180630947848"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.180363497484"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.183314955214"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.143690260486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.16059856385"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.18541999476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.191543329304"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.23194665476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.225833872942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.208773146942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.203163485308"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.14291320749"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST11"/>
+            <TerminoCosteHorario v="FEU"/>
+            <TipoPrecio v="Z14"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.13545470113"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.122069686768"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.121344802678"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.119725073042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.108715009042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.117372219132"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.124157627856"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.14509223658"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.17559649476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.155268567394"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.191980067666"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.18383397203"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.180630947848"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.180363497484"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.137461630486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.143690260486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.16059856385"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.18541999476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.237579470032"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.23194665476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.225833872942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.208773146942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.157126707398"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.14291320749"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST12"/>
+            <TerminoCosteHorario v="INTh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST13"/>
+            <TerminoCosteHorario v="OCh"/>
+            <TipoPrecio v="Z24"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.002952182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.002776182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.002761182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.002739182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.002605182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.002716182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.002821182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.003108182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.003366182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.003125182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.003018182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.003814182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.003774182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.003773182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.003793182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.002969182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.003182182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.003491182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.003583182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.004408182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.004328182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.004112182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.004022182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.002932182"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST14"/>
+            <TerminoCosteHorario v="OCh"/>
+            <TipoPrecio v="Z14"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.002952182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.002776182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.002761182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.002739182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.002605182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.002716182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.002821182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.003108182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.003366182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.003125182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.003922182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.003814182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.003774182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.003773182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.002889182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.002969182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.003182182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.003491182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.004486182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.004408182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.004328182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.004112182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.003119182"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.002932182"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST15"/>
+            <TerminoCosteHorario v="PMASh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.01149"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.01359"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.01398"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.01414"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.01495"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.01388"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.011"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.00682"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.00865"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.00998"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.01167"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.011"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.01106"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.01094"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.01096"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.01231"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.01142"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.0086"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.00665"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.00748"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.00877"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.01032"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.01131"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.01046"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST16"/>
+            <TerminoCosteHorario v="Pmh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.09289"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.07923"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.07787"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.07626"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.06664"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.07501"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.08479"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.10779"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.11104"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.09392"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.08518"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.07879"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.0761"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.07615"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.07744"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.08132"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.09622"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.11929"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.12728"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.12128"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.11478"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.099"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.09215"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.08075"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST17"/>
+            <TerminoCosteHorario v="SAh"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.01303"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.01513"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.01552"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.01568"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.01649"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.01542"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.01254"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.00836"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.01019"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.01152"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.01321"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.01254"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.0126"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.01248"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.0125"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.01385"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.01296"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.01014"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.00819"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.00902"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.01031"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.01186"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.01285"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.012"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST18"/>
+            <TerminoCosteHorario v="TCUh"/>
+            <TipoPrecio v="Z24"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.13227970113"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.118894686768"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.118169802678"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.116550073042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.105540009042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.114197219132"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.120982627856"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.14191723658"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.14702349476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.126695567394"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.117532082938"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.11084297203"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.107639947848"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.107372497484"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.110323955214"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.115117260486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.13202556385"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.15684699476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.162970329304"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.15895565476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.152842872942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.135782146942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.130172485308"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.11434020749"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+        <SeriesTemporales>
+            <IdentificacionSeriesTemporales v="IST19"/>
+            <TerminoCosteHorario v="TCUh"/>
+            <TipoPrecio v="Z14"/>
+            <UnidadPrecio v="EUR:KWH"/>
+            <Periodo>
+                <IntervaloTiempo v="2023-11-07T23:00Z/2023-11-08T23:00Z"/>
+                <Resolucion v="PT60M"/>
+                <Intervalo>
+                    <Pos v="1"/>
+                    <Ctd v="0.13227970113"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="2"/>
+                    <Ctd v="0.118894686768"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="3"/>
+                    <Ctd v="0.118169802678"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="4"/>
+                    <Ctd v="0.116550073042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="5"/>
+                    <Ctd v="0.105540009042"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="6"/>
+                    <Ctd v="0.114197219132"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="7"/>
+                    <Ctd v="0.120982627856"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="8"/>
+                    <Ctd v="0.14191723658"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="9"/>
+                    <Ctd v="0.14702349476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="10"/>
+                    <Ctd v="0.126695567394"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="11"/>
+                    <Ctd v="0.118989067666"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="12"/>
+                    <Ctd v="0.11084297203"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="13"/>
+                    <Ctd v="0.107639947848"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="14"/>
+                    <Ctd v="0.107372497484"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="15"/>
+                    <Ctd v="0.108888630486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="16"/>
+                    <Ctd v="0.115117260486"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="17"/>
+                    <Ctd v="0.13202556385"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="18"/>
+                    <Ctd v="0.15684699476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="19"/>
+                    <Ctd v="0.164588470032"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="20"/>
+                    <Ctd v="0.15895565476"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="21"/>
+                    <Ctd v="0.152842872942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="22"/>
+                    <Ctd v="0.135782146942"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="23"/>
+                    <Ctd v="0.128553707398"/>
+                </Intervalo>
+                <Intervalo>
+                    <Pos v="24"/>
+                    <Ctd v="0.11434020749"/>
+                </Intervalo>
+            </Periodo>
+        </SeriesTemporales>
+    </PVPCDesgloseHorario>
